@@ -202,5 +202,4 @@ sass/
 **Emin Perenda**
 GitHub: [@EminPerenda](https://github.com/EminPerenda)
 
-*Developed during a front-end internship to practise DOM manipulation, OOP patterns, CSS animations, localStorage, and web accessibility.*
 
