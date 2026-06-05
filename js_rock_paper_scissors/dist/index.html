@@ -13,6 +13,10 @@
 <body>
     <main>
         <h1 class="center" tabindex="0" >Rock Paper Scissors</h1>
+        <form class="divName" id="divName">
+            <input type="text" class="nameInput" id="playerName">
+        </form>
+      
         <a href="#p1msg0" class="skip-link">Skip Scoreboard</a>
 
         <section id="scoreboard" class="scoreboard">
@@ -20,7 +24,7 @@
             <section id="all_time" class="scoreboard__section">
                 <h3 class="offscreen">All Time Scoreboard</h3>
                 <div class="scoreboard__header" aria-hidden="true">
-                    <p><abbr title="Player One">P1</abbr></p>
+                    <p ><abbr title="Player One" id="allTimePlayer">P1</abbr></p>
                     <p>All Time</p>
                     <p><abbr title="Computer Player">CP</abbr></p>
                 </div>
@@ -36,7 +40,7 @@
             <section id="session" class="scoreboard__section">
                 <h3 class="offscreen">Session Scoreboard</h3>
                 <div class="scoreboard__header" aria-hidden="true">
-                    <p><abbr title="Player One">P1</abbr></p>
+                    <p ><abbr title="Player One" id="sessionPlayerOne">P1</abbr></p>
                     <p>Session</p>
                     <p><abbr title="Computer Player">CP</abbr></p>
                 </div>
