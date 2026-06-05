@@ -44,3 +44,25 @@ h2:focus{
 abbr{
     text-decoration: none;
 }
+.divName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5rem 0; 
+    font-size: 1rem;
+    @include mq(768px){
+        font-size: 2rem;
+    }
+}
+.nameInput{      
+    height: 75%;    
+    border-radius: 20px;      
+    padding: 10px 15px;      
+    border: 2px solid #ccc;    
+    outline: none;             
+    width: 75%;          
+     @include mq(768px){
+        font-size: 2rem;
+    }
+}
