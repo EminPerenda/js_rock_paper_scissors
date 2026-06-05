@@ -1,13 +1,35 @@
 import GameObj from "./Game.js";
+let player = "Player One"; 
+const playerInput = document.getElementById("playerName")
+const divName = document.getElementById("divName");
 const Game = new GameObj();
 const initApp = () => {
     initAllTimeData();
+    updatePlayerName();
     updateScoreBoard();
     listenForPlayerChoice();
     listenForEnterKey();
     listenForPlayAgain();
     lockComputerGameBoardHeight();
     document.querySelector("h1").focus();
+}
+const updatePlayerName = () =>{
+    divName.addEventListener('keydown',function(event){
+        if(event.key === "Enter"){
+            event.preventDefault();
+            const name = playerInput.value.trim();
+            
+            if(name === "") return;
+            player = name;
+            document.getElementById("p1msg").textContent = `${player} Chooses...`
+
+            document.getElementById("allTimePlayer").textContent = getInitial(player);
+            document.getElementById("sessionPlayerOne").textContent = getInitial(player);
+        }
+    });
+}
+const getInitial = (name) => {
+    return name ? name[0].toUpperCase() : "P";
 }
 document.addEventListener("DOMContentLoaded",initApp);
 const initAllTimeData = () => {
@@ -60,7 +82,7 @@ const listenForEnterKey = () =>{
     })
 }
 const listenForPlayAgain = () => {
-    document.querySelector("form").addEventListener("submit",(e)=>{
+    document.getElementById("playAgain").closest("form").addEventListener("submit",(e)=>{
         e.preventDefault();
         resetBoard();
     } )
@@ -170,7 +192,7 @@ const resetBoard = () => {
         if(el.id === "cp_paper") createGameImage("paper",el);
         if(el.id === "cp_scissors") createGameImage("scissors",el);
     });
-    document.getElementById("p1msg").textContent ="Player One Chooses...";
+    document.getElementById("p1msg").textContent =`${player} Chooses...`;
     document.getElementById("cpmsg").textContent ="Computer Chooses...";
     const ariaResult = document.getElementById("playAgain");
     ariaResult.ariaLabel = "Player One Chooses";
