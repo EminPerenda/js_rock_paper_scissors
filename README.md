@@ -202,13 +202,5 @@ sass/
 **Emin Perenda**
 GitHub: [@EminPerenda](https://github.com/EminPerenda)
 
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
 *Developed during a front-end internship to practise DOM manipulation, OOP patterns, CSS animations, localStorage, and web accessibility.*
 
